@@ -17,7 +17,7 @@ public class ServerEvents implements Listener {
     public void spawnJoin(PlayerJoinEvent e){
         Player player = e.getPlayer();
         e.setJoinMessage(null);
-        if (Main.config.contains("spawn")){
+        if (Main.configSpawn.contains("spawn")){
             player.teleport(player.getWorld().getSpawnLocation());
 
             player.setHealth(20.0);

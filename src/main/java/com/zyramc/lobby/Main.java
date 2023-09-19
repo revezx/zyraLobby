@@ -1,5 +1,6 @@
 package com.zyramc.lobby;
 
+import com.zyramc.lobby.api.ConfigAPI;
 import com.zyramc.lobby.api.SpawnAPI;
 import com.zyramc.lobby.cmd.Fly;
 import com.zyramc.lobby.hotbar.HidePlayers;
@@ -16,11 +17,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
     public static Main instance;
-    public static SpawnAPI config;
+    public static SpawnAPI configSpawn;
+    public static ConfigAPI configMain;
     @Override
     public void onEnable() {
         instance = this;
-        config = new SpawnAPI("world/spawn.yml", this);
+        configSpawn = new SpawnAPI("world/spawn.yml", this);
+        configMain = new ConfigAPI("doc.yml", this);
+
+        configSpawn.saveConfig();
+        configMain.saveConfig();
 
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 

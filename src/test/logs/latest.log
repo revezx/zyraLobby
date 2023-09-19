@@ -1,0 +1,158 @@
+[20:07:10] [Server thread/INFO]: Starting minecraft server version 1.8.8
+[20:07:10] [Server thread/INFO]: Loading properties
+[20:07:10] [Server thread/INFO]: Default game type: SURVIVAL
+[20:07:11] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
+[20:07:11] [Server thread/INFO]: Debug logging is disabled
+[20:07:11] [Server thread/INFO]: Server Ping Player Sample Count: 12
+
+[20:07:11] [Server thread/INFO]: Using 4 threads for Netty based IO
+[20:07:11] [Server thread/INFO]: Generating keypair
+[20:07:11] [Server thread/INFO]: Starting Minecraft server on *:25577
+[20:07:11] [Server thread/INFO]: Using default channel type
+[20:07:11] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+[20:07:11] [Server thread/INFO]: Set PluginClassLoader as parallel capable
+[20:07:11] [Server thread/INFO]: [zyraLobby] Loading zyraLobby v1.0
+[20:07:11] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[20:07:11] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[20:07:11] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[20:07:11] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[20:07:11] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
+[20:07:11] [Server thread/INFO]: Preparing level "tests"
+[20:07:11] [Server thread/INFO]: -------- World Settings For [tests] --------
+[20:07:11] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:07:11] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:07:11] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:07:11] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:07:11] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:07:11] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[20:07:11] [Server thread/INFO]: Clear tick list: false
+[20:07:11] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:07:11] [Server thread/INFO]: View Distance: 10
+[20:07:11] [Server thread/INFO]: Anti X-Ray: true
+[20:07:11] [Server thread/INFO]: 	Engine Mode: 1
+[20:07:11] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[20:07:11] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[20:07:11] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:07:11] [Server thread/INFO]: Mob Spawn Range: 4
+[20:07:11] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:07:11] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:07:11] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:07:11] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:07:11] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:07:11] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:07:11] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:07:11] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:07:11] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:07:11] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:07:11] [Server thread/INFO]: Random Lighting Updates: false
+[20:07:11] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[20:07:11] [Server thread/INFO]: Structure Info Saving: true
+[20:07:11] [Server thread/INFO]: Sending up to 10 chunks per packet
+[20:07:11] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[20:07:11] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:07:11] [Server thread/INFO]: Max Entity Collisions: 8
+[20:07:11] [Server thread/INFO]: Max TNT Explosions: 100
+[20:07:11] [Server thread/INFO]: Preparing start region for level 0 (Seed: -7562116251598866061)
+[20:07:12] [Server thread/INFO]: [zyraLobby] Enabling zyraLobby v1.0
+[20:07:12] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[20:07:12] [Server thread/INFO]: Done (0,671s)! For help, type "help" or "?"
+[20:07:19] [Thread-5/INFO]: UUID of player neviizs is f946d61a-8795-35eb-8edf-7b717dba567e
+[20:07:19] [Server thread/INFO]: neviizs[/127.0.0.1:56030] logged in with entity id 0 at ([tests]6.695332596452308, 77.0, 125.08993695253176)
+[20:07:22] [Server thread/INFO]: neviizs issued server command: /setspawn
+[20:07:22] [Server thread/INFO]: [neviizs: Set the world spawn point to (7, 77, 128)]
+[20:09:17] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+
+[20:09:17] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+
+[20:09:17] [Server thread/INFO]: Debug logging is disabled
+[20:09:17] [Server thread/INFO]: Server Ping Player Sample Count: 12
+
+[20:09:17] [Server thread/INFO]: Using 4 threads for Netty based IO
+[20:09:17] [Server thread/INFO]: -------- World Settings For [tests] --------
+[20:09:17] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:09:17] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:09:17] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:09:17] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:09:17] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:09:17] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[20:09:17] [Server thread/INFO]: Clear tick list: false
+[20:09:17] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:09:17] [Server thread/INFO]: View Distance: 10
+[20:09:17] [Server thread/INFO]: Anti X-Ray: true
+[20:09:17] [Server thread/INFO]: 	Engine Mode: 1
+[20:09:17] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[20:09:17] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[20:09:17] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:09:17] [Server thread/INFO]: Mob Spawn Range: 4
+[20:09:17] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:09:17] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:09:17] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:09:17] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:09:17] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:09:17] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:09:17] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:09:17] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:09:17] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:09:17] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:09:17] [Server thread/INFO]: Random Lighting Updates: false
+[20:09:17] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[20:09:17] [Server thread/INFO]: Structure Info Saving: true
+[20:09:17] [Server thread/INFO]: Sending up to 10 chunks per packet
+[20:09:17] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[20:09:17] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:09:17] [Server thread/INFO]: Max Entity Collisions: 8
+[20:09:17] [Server thread/INFO]: Max TNT Explosions: 100
+[20:09:17] [Server thread/INFO]: [zyraLobby] Disabling zyraLobby v1.0
+[20:09:17] [Server thread/INFO]: [zyraLobby] Loading zyraLobby v1.0
+[20:09:17] [Server thread/INFO]: [zyraLobby] Enabling zyraLobby v1.0
+[20:09:17] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[20:09:17] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+
+[20:10:09] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+
+[20:10:09] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+
+[20:10:09] [Server thread/INFO]: Debug logging is disabled
+[20:10:09] [Server thread/INFO]: Server Ping Player Sample Count: 12
+
+[20:10:09] [Server thread/INFO]: Using 4 threads for Netty based IO
+[20:10:09] [Server thread/INFO]: -------- World Settings For [tests] --------
+[20:10:09] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:10:09] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:10:09] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:10:09] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:10:09] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:10:09] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[20:10:09] [Server thread/INFO]: Clear tick list: false
+[20:10:09] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:10:09] [Server thread/INFO]: View Distance: 10
+[20:10:09] [Server thread/INFO]: Anti X-Ray: true
+[20:10:09] [Server thread/INFO]: 	Engine Mode: 1
+[20:10:09] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[20:10:09] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[20:10:09] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:10:09] [Server thread/INFO]: Mob Spawn Range: 4
+[20:10:09] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:10:09] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:10:09] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:10:09] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:10:09] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:10:09] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:10:09] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:10:09] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:10:09] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:10:09] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:10:09] [Server thread/INFO]: Random Lighting Updates: false
+[20:10:09] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[20:10:09] [Server thread/INFO]: Structure Info Saving: true
+[20:10:09] [Server thread/INFO]: Sending up to 10 chunks per packet
+[20:10:09] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[20:10:09] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:10:09] [Server thread/INFO]: Max Entity Collisions: 8
+[20:10:09] [Server thread/INFO]: Max TNT Explosions: 100
+[20:10:09] [Server thread/INFO]: [zyraLobby] Disabling zyraLobby v1.0
+[20:10:09] [Server thread/INFO]: [zyraLobby] Loading zyraLobby v1.0
+[20:10:09] [Server thread/INFO]: [zyraLobby] Enabling zyraLobby v1.0
+[20:10:09] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[20:10:09] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+

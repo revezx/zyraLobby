@@ -1,7 +1,6 @@
 package com.zyramc.lobby.utils;
 
 import com.zyramc.lobby.Main;
-import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,9 +17,8 @@ public class VoidEvents implements Listener {
     }
 
     private void teleportVoid(Player player){
-        World world = player.getWorld();
-        if (Main.config.contains("spawn")){
-            player.teleport(Main.config.getLocation("spawn"));
+        if (Main.configSpawn.contains("spawn")){
+            player.teleport(Main.configSpawn.getLocation("spawn"));
         }
     }
 

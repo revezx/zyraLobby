@@ -12,8 +12,8 @@ public class Spawn implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player player){
-            if (Main.config.contains("spawn")){
-                player.teleport(Main.config.getLocation("spawn"));
+            if (Main.configSpawn.contains("spawn")){
+                player.teleport(Main.configSpawn.getLocation("spawn"));
                 return true;
             }else {
                 player.sendMessage("");

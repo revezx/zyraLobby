@@ -1,6 +1,7 @@
 package com.zyramc.lobby.cmd;
 
 import com.zyramc.lobby.Main;
+import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,10 +17,11 @@ public class SetSpawn implements CommandExecutor {
             return true;
         }
 
-        if (!Main.config.contains("spawn")){
+        if (!Main.configSpawn.contains("spawn")){
             if (player.hasPermission("lobby.spawn.admin") || player.isOp()){
-                Main.config.setLocation("spawn", player.getLocation());
-                Main.config.saveConfig();
+                Main.configSpawn.setLocation("spawn", player.getLocation());
+                Main.configSpawn.saveConfig();
+                Bukkit.getServer().dispatchCommand(player, "setworldspawn");
                 player.sendMessage("");
                 player.sendMessage(" §a§lPERFEITO!");
                 player.sendMessage("");

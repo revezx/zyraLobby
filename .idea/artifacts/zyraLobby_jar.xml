@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="zyraLobby:jar">
+    <output-path>$PROJECT_DIR$/src/test/plugins</output-path>
+    <root id="archive" name="zyraLobby.jar">
+      <element id="module-output" name="zyraLobby" />
+    </root>
+  </artifact>
+</component>

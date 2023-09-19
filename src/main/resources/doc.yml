@@ -1,0 +1,11 @@
+# PERMISSÕES
+
+# lobby.build.event - Burlar o modo build (Não precisa executar o comando pra construir)
+# lobby.build.command - Usar o comando de Build
+
+# lobby.fly - Usar o modo de Voo
+# lobby.fly.admin - Alterar o modo de Voo do player
+
+# lobby.spawn.admin - Modificar o spawn
+
+# lobby.players - Burlar os cooldown de ocultar ou mostrar os players

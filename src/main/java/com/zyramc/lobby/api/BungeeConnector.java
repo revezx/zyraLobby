@@ -13,8 +13,8 @@ import java.util.Queue;
 
 public class BungeeConnector {
 
-    public static Plugin plugin = Main.getInstance(); // Certifique-se de que Main.getInstance() esteja definido corretamente.
-    public static Queue<Player> playerQueue = new LinkedList<>(); // Fila de jogadores
+    public static Plugin plugin = Main.getInstance();
+    public static Queue<Player> playerQueue = new LinkedList<>();
 
     public static void addToQueue(Player player, String serverName) {
         player.sendMessage("Aguarde na fila...");
@@ -26,7 +26,7 @@ public class BungeeConnector {
             public void run() {
                 addToQueueDelayed(player, serverName);
             }
-        }.runTaskLater(plugin, 100); // 200 ticks é igual a 10 segundos (20 ticks por segundo).
+        }.runTaskLater(plugin, 100);
     }
 
     public static void addToQueueDelayed(Player player, String serverName) {
