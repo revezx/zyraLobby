@@ -1,0 +1,23 @@
+name: zyraLobby
+main: com.zyramc.lobby.Main
+version: 1.0
+description: Lobby plugin for ZyraMC
+author: Neviizs
+
+commands:
+  build:
+    description: Habilita ou desabilita o modo de Construir
+    usage: /build
+    aliases: [construir, buildar, builder]
+  fly:
+    description: Habilita ou desabilita o modo de Fly
+    usage: /fly
+    aliases: [voar, voo]
+  spawn:
+    description: Teleporta o player para o Spawn
+    usage: /spawn
+    aliases: [casa, gerar]
+  setspawn:
+    description: Seta um spawn no Lobby
+    usage: /setspawn
+    aliases: [setlobby, setarlobby, setarspawn]
