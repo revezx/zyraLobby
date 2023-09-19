@@ -24,7 +24,7 @@ public class Spawn implements CommandExecutor {
                 player.sendMessage(" §fvá até o local e");
                 player.sendMessage(" §fuse: /setspawn");
                 player.sendMessage("");
-                player.sendMessage(" §7www.redeliberty.com");
+                player.sendMessage(" §7www.zyramc.com");
                 player.sendMessage("");
                 player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
             }

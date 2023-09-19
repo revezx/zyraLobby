@@ -26,7 +26,7 @@ public class SetSpawn implements CommandExecutor {
                 player.sendMessage(" §fLobby setado com sucesso");
                 player.sendMessage(" §fos players podem usar /spawn agora.");
                 player.sendMessage("");
-                player.sendMessage(" §7www.redeliberty.com");
+                player.sendMessage(" §7www.zyramc.com");
                 player.sendMessage("");
                 player.playSound(player.getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
             }else {
@@ -36,7 +36,7 @@ public class SetSpawn implements CommandExecutor {
                 player.sendMessage(" §fVocê não tem permissão para");
                 player.sendMessage(" §futilizar este comando.");
                 player.sendMessage("");
-                player.sendMessage(" §7www.redeliberty.com");
+                player.sendMessage(" §7www.zyramc.com");
                 player.sendMessage("");
                 player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
                 return true;
@@ -50,7 +50,7 @@ public class SetSpawn implements CommandExecutor {
             player.sendMessage(" §cO comando /resetspawn ainda está ");
             player.sendMessage(" §cem manutenção.");
             player.sendMessage("");
-            player.sendMessage(" §7www.redeliberty.com");
+            player.sendMessage(" §7www.zyramc.com");
             player.sendMessage("");
             player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
         }

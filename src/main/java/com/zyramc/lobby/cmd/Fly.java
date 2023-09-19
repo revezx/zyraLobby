@@ -53,7 +53,7 @@ public class Fly implements CommandExecutor {
                                     target.sendMessage(" §fO modo Fly foi §aativado §fpara você");
                                     target.sendMessage(" §fpor um Moderador.");
                                     target.sendMessage("");
-                                    target.sendMessage(" §7www.redeliberty.com");
+                                    target.sendMessage(" §7www.zyramc.com");
                                     target.sendMessage("");
 
                                     target.playSound(target.getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
@@ -68,7 +68,7 @@ public class Fly implements CommandExecutor {
                                     target.sendMessage(" §fO modo Fly foi §cdesativado §fpara você");
                                     target.sendMessage(" §fpor um Moderador.");
                                     target.sendMessage("");
-                                    target.sendMessage(" §7www.redeliberty.com");
+                                    target.sendMessage(" §7www.zyramc.com");
                                     target.sendMessage("");
 
                                     target.playSound(target.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
@@ -85,7 +85,7 @@ public class Fly implements CommandExecutor {
                             player.sendMessage(" §fVocê não tem permissão para");
                             player.sendMessage(" §futilizar este comando.");
                             player.sendMessage("");
-                            player.sendMessage(" §7www.redeliberty.com");
+                            player.sendMessage(" §7www.zyramc.com");
                             player.sendMessage("");
                             player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
                         }
@@ -97,7 +97,7 @@ public class Fly implements CommandExecutor {
                     player.sendMessage(" §fVocê não tem permissão para");
                     player.sendMessage(" §futilizar este comando.");
                     player.sendMessage("");
-                    player.sendMessage(" §7www.redeliberty.com");
+                    player.sendMessage(" §7www.zyramc.com");
                     player.sendMessage("");
                     player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
                 }
@@ -117,7 +117,7 @@ public class Fly implements CommandExecutor {
                                 target.sendMessage(" §fO modo Fly foi §aativado §fpara você");
                                 target.sendMessage(" §fpor um Moderador.");
                                 target.sendMessage("");
-                                target.sendMessage(" §7www.redeliberty.com");
+                                target.sendMessage(" §7www.zyramc.com");
                                 target.sendMessage("");
 
                                 target.playSound(target.getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
@@ -132,7 +132,7 @@ public class Fly implements CommandExecutor {
                                 target.sendMessage(" §fO modo Fly foi §cdesativado §fpara você");
                                 target.sendMessage(" §fpor um Moderador.");
                                 target.sendMessage("");
-                                target.sendMessage(" §7www.redeliberty.com");
+                                target.sendMessage(" §7www.zyramc.com");
                                 target.sendMessage("");
 
                                 target.playSound(target.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);

@@ -49,7 +49,7 @@ public class Build implements CommandExecutor {
                     player.sendMessage(" §fVocê não tem permissão para");
                     player.sendMessage(" §futilizar este comando.");
                     player.sendMessage("");
-                    player.sendMessage(" §7www.redeliberty.com");
+                    player.sendMessage(" §7www.zyramc.com");
                     player.sendMessage("");
                     player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
                 }
