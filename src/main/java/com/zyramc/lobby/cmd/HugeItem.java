@@ -58,7 +58,7 @@ public class HugeItem implements CommandExecutor {
                 return true;
             } else if (cmd.getName().equalsIgnoreCase("removehugeitem")) {
                 // Chame a API para remover itens gigantes nas proximidades do jogador
-                HugeItemsAPI.remove(player); // Raio de 10 blocos
+
                 player.sendMessage("Itens gigantes removidos nas proximidades.");
                 return true;
             }

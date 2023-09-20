@@ -24,7 +24,7 @@ public class MenuGames implements Listener {
         ItemStack bussola = new ItemStack(Material.COMPASS);
         ItemMeta meta = bussola.getItemMeta();
 
-        meta.setDisplayName("§a✦ Menu de Jogos §7(Clique Direito)");
+        meta.setDisplayName("§a➽ Menu de Jogos §7(Clique Direito)");
 
         List<String> lore = new ArrayList<>();
         lore.add(" ");
@@ -48,28 +48,26 @@ public class MenuGames implements Listener {
 
         ItemStack rankup = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
         SkullMeta metaRankup = (SkullMeta) rankup.getItemMeta();
-        metaRankup.setOwner("luke4891");
-        metaRankup.setDisplayName("§aRankUp §f§lNOVO!");
+        metaRankup.setOwner("Sugar_Cane_");
+        metaRankup.setDisplayName("§d§lNOVO! §f§lRankUP §a§leHARVEST");
         List<String> loreRankup = new ArrayList<>();
-        loreRankup.add("");
+        loreRankup.add(" ");
+        loreRankup.add("  §7Um dos melhores RankUp's ");
+        loreRankup.add("  §7de plantações do Minecraft. ");
+        loreRankup.add(" ");
+        loreRankup.add("  §aNovidades:");
+        loreRankup.add("    §7◌ Crates ");
+        loreRankup.add("    §7◌ Bosses ");
+        loreRankup.add("    §7◌ Máquinas ");
+        loreRankup.add("    §7◌ Pesca ");
+        loreRankup.add("    §7◌ Bosses ");
+        loreRankup.add(" ");
+        loreRankup.add("§aClique para jogar.");
         metaRankup.setLore(loreRankup);
         rankup.setItemMeta(metaRankup);
 
-        ItemStack embreve = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
-        SkullMeta embreveMeta = (SkullMeta) embreve.getItemMeta();
-        embreveMeta.setOwner("haohanklliu");
-        embreveMeta.setDisplayName("§f§lEM BREVE");
-        List<String> loreEmbreve = new ArrayList<>();
-        loreEmbreve.add("§kdawdawdawdawdawdwa");
-        loreEmbreve.add("§kdawdawdawdawdawdwa");
-        loreEmbreve.add("§kdawdawdawdawdawdwa");
-        loreEmbreve.add("§kdawdawdawdawdawdwa");
-        embreveMeta.setLore(loreEmbreve);
-        embreve.setItemMeta(embreveMeta);
-
-        inventory.setItem(10, embreve);
         inventory.setItem(13, rankup);
-        inventory.setItem(16, embreve);
+
 
         player.openInventory(inventory);
     }
@@ -83,7 +81,7 @@ public class MenuGames implements Listener {
             ItemMeta meta = clickItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Jogos §7(Clique Direito)")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a➽ Menu de Jogos §7(Clique Direito)")){
                 if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
                     openMenu(player);
                 } else {
@@ -101,7 +99,7 @@ public class MenuGames implements Listener {
             ItemMeta meta = dropItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Jogos §7(Clique Direito)")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a➽ Menu de Jogos §7(Clique Direito)")){
                 e.setCancelled(true);
             }
         }
@@ -113,7 +111,7 @@ public class MenuGames implements Listener {
         Player player = (Player) e.getWhoClicked();
         if (clickItem != null){
             ItemMeta meta = clickItem.getItemMeta();
-            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Jogos §7(Clique Direito)")){
+            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§a➽ Menu de Jogos §7(Clique Direito)")){
                 e.setCancelled(true);
             } else if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§aRankUp §f§lNOVO!")) {
                 BungeeConnector.addToQueue(player, "rankup");

@@ -24,7 +24,7 @@ public class Lobbies implements Listener {
         ItemStack lobbies = new ItemStack(Material.NETHER_STAR);
         ItemMeta meta = lobbies.getItemMeta();
 
-        meta.setDisplayName("§a✦ Menu de Lobbies §7(Clique Direito)");
+        meta.setDisplayName("§a➽ Menu de Lobbies §7(Clique Direito)");
 
         lobbies.setItemMeta(meta);
         return lobbies;
@@ -82,7 +82,7 @@ public class Lobbies implements Listener {
             ItemMeta meta = clickItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Lobbies §7(Clique Direito)")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a➽ Menu de Lobbies §7(Clique Direito)")){
                 if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
                     openMenu(player);
                 } else {
@@ -100,7 +100,7 @@ public class Lobbies implements Listener {
             ItemMeta meta = dropItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Lobbies §7(Clique Direito)")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a➽ Menu de Lobbies §7(Clique Direito)")){
                 e.setCancelled(true);
             }
         }
@@ -111,7 +111,7 @@ public class Lobbies implements Listener {
         ItemStack clickItem = e.getCurrentItem();
         if (clickItem != null){
             ItemMeta meta = clickItem.getItemMeta();
-            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Lobbies §7(Clique Direito)")){
+            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§a➽ Menu de Lobbies §7(Clique Direito)")){
                 e.setCancelled(true);
             } else if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§aLobby 1")) {
                 e.setCancelled(true);

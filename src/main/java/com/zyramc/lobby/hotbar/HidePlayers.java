@@ -14,7 +14,7 @@ public class HidePlayers implements Listener {
         ItemStack purpleDye = new ItemStack(Material.INK_SACK, 1, (short) 10);
         ItemMeta purpleDyeMeta = purpleDye.getItemMeta();
 
-        purpleDyeMeta.setDisplayName("§a✦ Ocultar Players §7(Clique Direito)");
+        purpleDyeMeta.setDisplayName("§a➽ Ocultar Players §7(Clique Direito)");
 
         purpleDye.setItemMeta(purpleDyeMeta);
         return purpleDye;

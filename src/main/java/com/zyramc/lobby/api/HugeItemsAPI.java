@@ -32,25 +32,6 @@ public class HugeItemsAPI implements Listener {
         stand.setPassenger((Entity)giant);
     }
 
-    public static void remove(Player p) {
-        List<Entity> entities = p.getNearbyEntities(4.0D, 8.0D, 4.0D);
-        setI(0);
-        for (Entity entity : entities) {
-            if (entity instanceof ArmorStand) {
-                ArmorStand stand = (ArmorStand)entity;
-                if (stand.getPassenger() instanceof Giant) {
-                    Giant giant = (Giant)stand.getPassenger();
-                    if (stand.getCustomName().equalsIgnoreCase("HugeItemStand"))
-                        if (p.getLocation().getY() > stand.getLocation().getY()) {
-                            giant.remove();
-                            stand.remove();
-                            setI(getI() + 1);
-                        }
-                }
-            }
-        }
-    }
-
     public static int getI() {
         return i;
     }
