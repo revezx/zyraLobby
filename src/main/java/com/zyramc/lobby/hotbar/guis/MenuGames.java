@@ -52,15 +52,15 @@ public class MenuGames implements Listener {
         metaRankup.setDisplayName("§d§lNOVO! §a§lRankUP HARVEST");
         List<String> loreRankup = new ArrayList<>();
         loreRankup.add(" ");
-        loreRankup.add("  §7Um dos melhores RankUP ");
+        loreRankup.add("  §7Venha jogar em nosso novo §aRankUP HARVEST ");
         loreRankup.add("  §7de plantações do Minecraft. ");
         loreRankup.add(" ");
         loreRankup.add("  §aNovidades:");
-        loreRankup.add("    §7◌ Crates ");
+        loreRankup.add("    §7◌ Campos ");
         loreRankup.add("    §7◌ Bosses ");
         loreRankup.add("    §7◌ Máquinas ");
         loreRankup.add("    §7◌ Pesca ");
-        loreRankup.add("    §7◌ Bosses ");
+        loreRankup.add("    §7◌ Crates ");
         loreRankup.add(" ");
         loreRankup.add("§aClique para jogar.");
         metaRankup.setLore(loreRankup);
