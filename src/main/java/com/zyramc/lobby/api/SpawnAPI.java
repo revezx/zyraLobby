@@ -93,4 +93,15 @@ public class SpawnAPI {
         return config.getConfigurationSection(path);
     }
 
+    public void clearSection(String path) {
+        ConfigurationSection section = getSection(path);
+
+        if (section != null) {
+            for (String key : section.getKeys(false)) {
+                section.set(key, null);
+            }
+            saveConfig();
+        }
+    }
+
 }

@@ -42,6 +42,8 @@ public class Main extends JavaPlugin {
         getCommand("setspawn").setExecutor(new SetSpawn());
         getCommand("setnpc").setExecutor(new HugeItem());
         getCommand("delnpc").setExecutor(new RemoveArmorStands(this));
+        getCommand("removehugeitem").setExecutor(new HugeItem());
+        getCommand("resetspawn").setExecutor(new ResetSpawn());
 
         net.citizensnpcs.api.CitizensAPI.getTraitFactory().registerTrait(net.citizensnpcs.api.trait.TraitInfo.create(GiantZombieTrait.class));
 
