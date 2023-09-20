@@ -13,11 +13,12 @@ public class SetSpawn implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        if (!(sender instanceof Player player)){
+        if (!(sender instanceof Player)){
             return true;
         }
 
         if (!Main.configSpawn.contains("spawn")){
+            Player player = (Player) sender;
             if (player.hasPermission("lobby.spawn.admin") || player.isOp()){
                 Main.configSpawn.setLocation("spawn", player.getLocation());
                 Main.configSpawn.saveConfig();
@@ -44,6 +45,7 @@ public class SetSpawn implements CommandExecutor {
                 return true;
             }
         }else {
+            Player player = (Player) sender;
             player.sendMessage("");
             player.sendMessage(" §c§lERRO!");
             player.sendMessage("");
