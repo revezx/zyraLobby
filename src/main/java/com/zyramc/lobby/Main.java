@@ -34,6 +34,7 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new HidePlayers(), this);
         getServer().getPluginManager().registerEvents(new HidePlayersUtil(this), this);
         getServer().getPluginManager().registerEvents(new Lobbies(), this);
+        getServer().getPluginManager().registerEvents(new Fly(), this);
 
         getCommand("build").setExecutor(new Build());
         getCommand("fly").setExecutor(new Fly());

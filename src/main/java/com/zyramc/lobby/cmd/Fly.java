@@ -8,9 +8,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-public class Fly implements CommandExecutor {
+public class Fly implements CommandExecutor, Listener {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("fly")) {
@@ -157,14 +158,9 @@ public class Fly implements CommandExecutor {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
-        if (!player.getAllowFlight()) {
-            if (player.hasPermission("lobby.fly.join") || player.isOp()) {
-                player.setAllowFlight(true);
-
-            } else {
-                player.setAllowFlight(false);
-
-            }
+        if (player.hasPermission("lobby.fly.join") || player.isOp()){
+            player.setAllowFlight(true);
+            player.setFlying(true);
         }
     }
 
