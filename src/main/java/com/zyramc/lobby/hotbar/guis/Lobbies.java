@@ -5,6 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -23,7 +24,7 @@ public class Lobbies implements Listener {
         ItemStack lobbies = new ItemStack(Material.NETHER_STAR);
         ItemMeta meta = lobbies.getItemMeta();
 
-        meta.setDisplayName("§aMenu de Lobbies §7(Clique Direito)");
+        meta.setDisplayName("§a✦ Menu de Lobbies §7(Clique Direito)");
 
         lobbies.setItemMeta(meta);
         return lobbies;
@@ -32,7 +33,7 @@ public class Lobbies implements Listener {
     @EventHandler
     public void setJoinItem(PlayerJoinEvent e){
         Player player = e.getPlayer();
-        player.getInventory().setItem(8, lobbiesMenu());
+        player.getInventory().setItem(6, lobbiesMenu());
     }
 
     public static void openMenu(Player player){
@@ -81,11 +82,11 @@ public class Lobbies implements Listener {
             ItemMeta meta = clickItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§aMenu de Lobbies §7(Clique Direito)")){
-                if (e.getAction().toString().contains("RIGHT")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Lobbies §7(Clique Direito)")){
+                if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
                     openMenu(player);
-                } else if (e.getAction().toString().contains("LEFT")) {
-                    openMenu(player);
+                } else {
+                    return;
                 }
             }
         }
@@ -99,7 +100,7 @@ public class Lobbies implements Listener {
             ItemMeta meta = dropItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§aMenu de Lobbies §7(Clique Direito)")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Lobbies §7(Clique Direito)")){
                 e.setCancelled(true);
             }
         }
@@ -110,7 +111,7 @@ public class Lobbies implements Listener {
         ItemStack clickItem = e.getCurrentItem();
         if (clickItem != null){
             ItemMeta meta = clickItem.getItemMeta();
-            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§aMenu de Lobbies §7(Clique Direito)")){
+            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Lobbies §7(Clique Direito)")){
                 e.setCancelled(true);
             } else if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§aLobby 1")) {
                 e.setCancelled(true);

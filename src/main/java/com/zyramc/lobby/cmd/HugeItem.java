@@ -1,18 +1,13 @@
 package com.zyramc.lobby.cmd;
 
 import com.zyramc.lobby.api.HugeItemsAPI;
-import net.citizensnpcs.api.CitizensAPI;
-import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.*;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.util.EulerAngle;
 
 import static org.bukkit.Material.*;
 

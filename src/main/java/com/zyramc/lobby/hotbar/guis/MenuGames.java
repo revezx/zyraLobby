@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -23,7 +24,7 @@ public class MenuGames implements Listener {
         ItemStack bussola = new ItemStack(Material.COMPASS);
         ItemMeta meta = bussola.getItemMeta();
 
-        meta.setDisplayName("§aMenu de Jogos §7(Clique Direito)");
+        meta.setDisplayName("§a✦ Menu de Jogos §7(Clique Direito)");
 
         List<String> lore = new ArrayList<>();
         lore.add(" ");
@@ -39,7 +40,7 @@ public class MenuGames implements Listener {
     @EventHandler
     public void setJoinItem(PlayerJoinEvent e){
         Player player = e.getPlayer();
-        player.getInventory().setItem(0, bussolaMenu());
+        player.getInventory().setItem(4, bussolaMenu());
     }
 
     public static void openMenu(Player player){
@@ -82,11 +83,11 @@ public class MenuGames implements Listener {
             ItemMeta meta = clickItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§aMenu de Jogos §7(Clique Direito)")){
-                if (e.getAction().toString().contains("RIGHT")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Jogos §7(Clique Direito)")){
+                if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
                     openMenu(player);
-                } else if (e.getAction().toString().contains("LEFT")) {
-                    openMenu(player);
+                } else {
+                    return;
                 }
             }
         }
@@ -100,7 +101,7 @@ public class MenuGames implements Listener {
             ItemMeta meta = dropItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§aMenu de Jogos §7(Clique Direito)")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Jogos §7(Clique Direito)")){
                 e.setCancelled(true);
             }
         }
@@ -112,7 +113,7 @@ public class MenuGames implements Listener {
         Player player = (Player) e.getWhoClicked();
         if (clickItem != null){
             ItemMeta meta = clickItem.getItemMeta();
-            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§aMenu de Jogos §7(Clique Direito)")){
+            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§a✦ Menu de Jogos §7(Clique Direito)")){
                 e.setCancelled(true);
             } else if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§aRankUp §f§lNOVO!")) {
                 BungeeConnector.addToQueue(player, "rankup");

@@ -26,6 +26,8 @@ public class ServerEvents implements Listener {
         player.setGameMode(GameMode.ADVENTURE);
         player.getInventory().clear();
 
+        e.getPlayer().getInventory().setHeldItemSlot(4);
+
         if (Main.configSpawn.contains("spawn")) {
             Main.configSpawn.teleportPlayerToLocation(player, Main.configSpawn.getLocation("spawn"));
             Main.configSpawn.saveConfig();

@@ -3,8 +3,6 @@ main: com.zyramc.lobby.Main
 version: 1.0
 description: Lobby plugin for ZyraMC
 author: Neviizs
-depend:
-  - Citizens
 
 commands:
   build:

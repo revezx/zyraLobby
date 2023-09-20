@@ -18,13 +18,13 @@ public class Fly implements CommandExecutor {
                 // Comando para jogadores
                 Player player = (Player) sender;
 
-                if (player.hasPermission("lobby.fly") || player.isOp()){
+                if (player.hasPermission("lobby.fly") || player.isOp()) {
                     if (args.length == 0) {
-                        if (!player.getAllowFlight()){
+                        if (!player.getAllowFlight()) {
                             player.setAllowFlight(true);
                             player.setFlying(true);
                             ActionBarAPI.sendActionBar(player, "§aModo Fly ativado.");
-                        }else {
+                        } else {
                             player.setAllowFlight(false);
                             player.setFlying(false);
                             ActionBarAPI.sendActionBar(player, "§eModo Fly desativado.");
@@ -40,11 +40,11 @@ public class Fly implements CommandExecutor {
                         player.sendMessage("");
                         player.playSound(player.getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
                     }
-                    if (args.length == 1){
-                        if (player.hasPermission("lobby.fly.admin")){
+                    if (args.length == 1) {
+                        if (player.hasPermission("lobby.fly.admin")) {
                             Player target = Bukkit.getPlayer(args[0]);
-                            if (target != null){
-                                if (!target.getAllowFlight()){
+                            if (target != null) {
+                                if (!target.getAllowFlight()) {
                                     target.setAllowFlight(true);
                                     target.setFlying(true);
                                     target.sendMessage("");
@@ -59,7 +59,7 @@ public class Fly implements CommandExecutor {
                                     target.playSound(target.getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
 
                                     sender.sendMessage("§eModo Fly §aativado para §f" + target.getName());
-                                }else {
+                                } else {
                                     target.setAllowFlight(false);
                                     target.setFlying(false);
                                     target.sendMessage("");
@@ -75,10 +75,10 @@ public class Fly implements CommandExecutor {
 
                                     sender.sendMessage("§eModo Fly §cdesativado para §f" + target.getName());
                                 }
-                            }else {
+                            } else {
                                 player.sendMessage("jogador não encontrado");
                             }
-                        }else {
+                        } else {
                             player.sendMessage("");
                             player.sendMessage(" §c§lERRO!");
                             player.sendMessage("");
@@ -90,7 +90,7 @@ public class Fly implements CommandExecutor {
                             player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
                         }
                     }
-                }else {
+                } else {
                     player.sendMessage("");
                     player.sendMessage(" §c§lERRO!");
                     player.sendMessage("");
@@ -105,10 +105,10 @@ public class Fly implements CommandExecutor {
             } else {
                 // Comando para o console
                 if (args.length == 1) {
-                    if (sender.hasPermission("lobby.fly.admin") || sender.isOp()){
+                    if (sender.hasPermission("lobby.fly.admin") || sender.isOp()) {
                         Player target = Bukkit.getPlayer(args[0]);
                         if (target != null) {
-                            if (!target.getAllowFlight()){
+                            if (!target.getAllowFlight()) {
                                 target.setAllowFlight(true);
                                 target.setFlying(true);
                                 target.sendMessage("");
@@ -123,7 +123,7 @@ public class Fly implements CommandExecutor {
                                 target.playSound(target.getLocation(), Sound.ORB_PICKUP, 1.0f, 1.0f);
 
                                 sender.sendMessage("§eModo Fly §aativado para §f" + target.getName());
-                            }else {
+                            } else {
                                 target.setAllowFlight(false);
                                 target.setFlying(false);
                                 target.sendMessage("");
@@ -142,7 +142,7 @@ public class Fly implements CommandExecutor {
                         } else {
                             sender.sendMessage("Jogador não encontrado.");
                         }
-                    }else {
+                    } else {
                         sender.sendMessage("Você não tem permissão");
                     }
                 } else {
@@ -155,11 +155,16 @@ public class Fly implements CommandExecutor {
     }
 
     @EventHandler
-    public void onJoin(PlayerJoinEvent e){
+    public void onJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
-        if (player.getAllowFlight()){
-            player.setAllowFlight(false);
-            player.setFlying(false);
+        if (!player.getAllowFlight()) {
+            if (player.hasPermission("lobby.fly.join") || player.isOp()) {
+                player.setAllowFlight(true);
+
+            } else {
+                player.setAllowFlight(false);
+
+            }
         }
     }
 

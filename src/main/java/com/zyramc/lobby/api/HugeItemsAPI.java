@@ -1,8 +1,5 @@
 package com.zyramc.lobby.api;
 
-import net.citizensnpcs.api.CitizensAPI;
-import net.citizensnpcs.api.npc.NPC;
-import net.citizensnpcs.api.trait.trait.Equipment;
 import org.bukkit.Location;
 import org.bukkit.entity.*;
 import org.bukkit.event.Listener;

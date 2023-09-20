@@ -6,6 +6,7 @@ import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -33,12 +34,12 @@ public class HidePlayersUtil implements Listener {
             ItemMeta meta = dropItem.getItemMeta();
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§aOcultar Players §7(Clique Direito)")){
+                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Ocultar Players §7(Clique Direito)")){
                 e.setCancelled(true);
             }
             if (meta != null
                     && meta.hasDisplayName()
-                    && meta.getDisplayName().equalsIgnoreCase("§aMostrar Players §7(Clique Direito)")) {
+                    && meta.getDisplayName().equalsIgnoreCase("§a✦ Mostrar Players §7(Clique Direito)")) {
                 e.setCancelled(true);
             }
         }
@@ -49,9 +50,9 @@ public class HidePlayersUtil implements Listener {
         ItemStack clickItem = e.getCurrentItem();
         if (clickItem != null){
             ItemMeta meta = clickItem.getItemMeta();
-            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§aMostrar Players §7(Clique Direito)")){
+            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§a✦ Mostrar Players §7(Clique Direito)")){
                 e.setCancelled(true);
-            } else if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§aOcultar Players §7(Clique Direito)")) {
+            } else if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equalsIgnoreCase("§a✦ Ocultar Players §7(Clique Direito)")) {
                 e.setCancelled(true);
             }
         }
@@ -59,69 +60,74 @@ public class HidePlayersUtil implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        Player player = event.getPlayer();
-        ItemStack itemInHand = player.getItemInHand();
+        Action action = event.getAction();
 
-        if (itemInHand != null && itemInHand.hasItemMeta()) {
-            ItemMeta itemMeta = itemInHand.getItemMeta();
-            String displayName = itemMeta.getDisplayName();
+        if (action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK) {
+            Player player = event.getPlayer();
+            ItemStack itemInHand = player.getItemInHand();
 
-            if (displayName.equals("§aOcultar Players §7(Clique Direito)")) {
-                // Lime Dye foi clicado, ocultar os jogadores
-                if (cooldownMap.containsKey(player)){
-                    long lastUsage = cooldownMap.get(player);
-                    long currentTime = System.currentTimeMillis();
-                    long timeElapsed = currentTime - lastUsage;
+            if (itemInHand != null && itemInHand.hasItemMeta()) {
+                ItemMeta itemMeta = itemInHand.getItemMeta();
+                String displayName = itemMeta.getDisplayName();
 
-                    if (timeElapsed < 20000){
-                        long remainingTime = 20000 - timeElapsed;
-                        player.sendMessage("");
-                        player.sendMessage(" §cAguarde " + (remainingTime / 1000) + " segundos");
-                        player.sendMessage(" §cantes de usar novamente.");
-                        player.sendMessage("");
-                        player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
-                        return;
-                    }
-                }
+                if (displayName.equals("§a✦ Ocultar Players §7(Clique Direito)")) {
+                    // Lime Dye foi clicado, ocultar os jogadores
+                    if (cooldownMap.containsKey(player)) {
+                        long lastUsage = cooldownMap.get(player);
+                        long currentTime = System.currentTimeMillis();
+                        long timeElapsed = currentTime - lastUsage;
 
-                for (Player otherPlayer : player.getServer().getOnlinePlayers()) {
-                    if (!otherPlayer.equals(player)) {
-                        player.hidePlayer(otherPlayer);
-                    }
-                }
-
-                // Mudar o item para Gray Dye
-                itemInHand.setType(Material.INK_SACK);
-                itemInHand.setDurability((short) 8);
-                itemMeta.setDisplayName("§aMostrar Players §7(Clique Direito)");
-                itemInHand.setItemMeta(itemMeta);
-
-                if (!player.hasPermission("lobby.players") || !player.isOp()){
-                    cooldownMap.put(player, System.currentTimeMillis());
-                    new BukkitRunnable() {
-                        @Override
-                        public void run() {
-                            cooldownMap.remove(player);
+                        if (timeElapsed < 20000) {
+                            long remainingTime = 20000 - timeElapsed;
+                            player.sendMessage("");
+                            player.sendMessage(" §cAguarde " + (remainingTime / 1000) + " segundos");
+                            player.sendMessage(" §cantes de usar novamente.");
+                            player.sendMessage("");
+                            player.playSound(player.getLocation(), Sound.CHICKEN_IDLE, 1.0f, 1.0f);
+                            return;
                         }
-                    }.runTaskLater(plugin, 400);
-                }
-
-
-            } else if (displayName.equals("§aMostrar Players §7(Clique Direito)")) {
-                // Gray Dye foi clicado, mostrar os jogadores
-                for (Player otherPlayer : player.getServer().getOnlinePlayers()) {
-                    if (!otherPlayer.equals(player)) {
-                        player.showPlayer(otherPlayer);
                     }
-                }
 
-                // Mudar o item para Lime Dye
-                itemInHand.setType(Material.INK_SACK);
-                itemInHand.setDurability((short) 10);
-                itemMeta.setDisplayName("§aOcultar Players §7(Clique Direito)");
-                itemInHand.setItemMeta(itemMeta);
+                    for (Player otherPlayer : player.getServer().getOnlinePlayers()) {
+                        if (!otherPlayer.equals(player)) {
+                            player.hidePlayer(otherPlayer);
+                        }
+                    }
+
+                    // Mudar o item para Gray Dye
+                    itemInHand.setType(Material.INK_SACK);
+                    itemInHand.setDurability((short) 8);
+                    itemMeta.setDisplayName("§a✦ Mostrar Players §7(Clique Direito)");
+                    itemInHand.setItemMeta(itemMeta);
+
+                    if (!player.hasPermission("lobby.players") || !player.isOp()) {
+                        cooldownMap.put(player, System.currentTimeMillis());
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                cooldownMap.remove(player);
+                            }
+                        }.runTaskLater(plugin, 400);
+                    }
+                } else if (displayName.equals("§a✦ Mostrar Players §7(Clique Direito)")) {
+                    // Gray Dye foi clicado, mostrar os jogadores
+                    for (Player otherPlayer : player.getServer().getOnlinePlayers()) {
+                        if (!otherPlayer.equals(player)) {
+                            player.showPlayer(otherPlayer);
+                        }
+                    }
+
+                    // Mudar o item para Lime Dye
+                    itemInHand.setType(Material.INK_SACK);
+                    itemInHand.setDurability((short) 10);
+                    itemMeta.setDisplayName("§a✦ Ocultar Players §7(Clique Direito)");
+                    itemInHand.setItemMeta(itemMeta);
+                }
             }
         }
+
+        event.setCancelled(true); // Cancela o evento para evitar ações adicionais no clique esquerdo.
     }
+
 
 }

@@ -2,7 +2,6 @@ package com.zyramc.lobby;
 
 import com.zyramc.lobby.api.ConfigAPI;
 import com.zyramc.lobby.api.SpawnAPI;
-import com.zyramc.lobby.citizens.GiantZombieTrait;
 import com.zyramc.lobby.cmd.*;
 import com.zyramc.lobby.hotbar.HidePlayers;
 import com.zyramc.lobby.hotbar.guis.Lobbies;
@@ -41,12 +40,8 @@ public class Main extends JavaPlugin {
         getCommand("spawn").setExecutor(new Spawn());
         getCommand("setspawn").setExecutor(new SetSpawn());
         getCommand("setnpc").setExecutor(new HugeItem());
-        getCommand("delnpc").setExecutor(new RemoveArmorStands(this));
         getCommand("removehugeitem").setExecutor(new HugeItem());
         getCommand("resetspawn").setExecutor(new ResetSpawn());
-
-        net.citizensnpcs.api.CitizensAPI.getTraitFactory().registerTrait(net.citizensnpcs.api.trait.TraitInfo.create(GiantZombieTrait.class));
-
     }
 
     @Override
