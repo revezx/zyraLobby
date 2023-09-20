@@ -48,11 +48,11 @@ public class MenuGames implements Listener {
 
         ItemStack rankup = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
         SkullMeta metaRankup = (SkullMeta) rankup.getItemMeta();
-        metaRankup.setOwner("Sugar_Cane_");
-        metaRankup.setDisplayName("§d§lNOVO! §f§lRankUP §a§leHARVEST");
+        metaRankup.setOwner("meatmods");
+        metaRankup.setDisplayName("§d§lNOVO! §a§lRankUP HARVEST");
         List<String> loreRankup = new ArrayList<>();
         loreRankup.add(" ");
-        loreRankup.add("  §7Um dos melhores RankUp's ");
+        loreRankup.add("  §7Um dos melhores RankUP ");
         loreRankup.add("  §7de plantações do Minecraft. ");
         loreRankup.add(" ");
         loreRankup.add("  §aNovidades:");
