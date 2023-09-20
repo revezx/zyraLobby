@@ -53,7 +53,7 @@ public class MenuGames implements Listener {
         List<String> loreRankup = new ArrayList<>();
         loreRankup.add(" ");
         loreRankup.add("  §7Venha jogar em nosso novo §aRankUP HARVEST ");
-        loreRankup.add("  §7de plantações do Minecraft. ");
+        loreRankup.add("  §7com varios sistemas novos!. ");
         loreRankup.add(" ");
         loreRankup.add("  §aNovidades:");
         loreRankup.add("    §7◌ Campos ");
