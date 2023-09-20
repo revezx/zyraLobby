@@ -22,7 +22,6 @@ public class SetSpawn implements CommandExecutor {
             if (player.hasPermission("lobby.spawn.admin") || player.isOp()){
                 Main.configSpawn.setLocation("spawn", player.getLocation());
                 Main.configSpawn.saveConfig();
-                Bukkit.getServer().dispatchCommand(player, "setworldspawn");
                 player.sendMessage("");
                 player.sendMessage(" §a§lPERFEITO!");
                 player.sendMessage("");

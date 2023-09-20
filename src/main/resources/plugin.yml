@@ -3,6 +3,8 @@ main: com.zyramc.lobby.Main
 version: 1.0
 description: Lobby plugin for ZyraMC
 author: Neviizs
+depend:
+  - Citizens
 
 commands:
   build:
@@ -21,3 +23,5 @@ commands:
     description: Seta um spawn no Lobby
     usage: /setspawn
     aliases: [setlobby, setarlobby, setarspawn]
+  setnpc:
+  delnpc:
